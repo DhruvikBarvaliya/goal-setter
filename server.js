@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: false }))
 const port = process.env.PORT || 4000
 
 app.use('/api/goals', require('./routes/goalRouter'))
+app.use('/api/users', require('./routes/userRoute'))
 app.use(errorHandler)
 
 app.listen(port, () => {
